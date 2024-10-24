@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    color:  #ffffff;
+    margin-bottom: 20px;
+    font-size: 2.8em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+form {
+    padding: 40px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+input[type='text'] {
+    padding: 12px;
+    width: calc(100% - 24px);
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+input[type='text']:focus {
+    border-color: #0072ff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 114, 255, 0.2);
+}
+
+button {
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056cc;
+}
+
+p {
+    font-size: 1.2em;
+    margin-top: 15px;
+    color: #333;
+}
+
+.error {
+    color: #ff4a4a;
+    font-weight: bold;
+    text-align: center;
+}
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora CGI</title>
+</head>
+<body>
+    <h1>Calculadora CGI</h1>
+    <form action="/cgi-bin/Prueba01.pl" method="get">
+        <label for="operacion">Ingresa la operación:</label>
+        <input type="text" id="operacion" name="operacion" required>
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>
